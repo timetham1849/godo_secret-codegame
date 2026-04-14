@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://d2tr88q7b5crn"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_sknna"]
+load_path = "res://.godot/imported/หน้า.jpg-113561f1302101dbec5eb14a9350f15f.ctex"
+
+[node name="Node2D" type="Node2D" unique_id=2099238146]
+
+[node name="หน้า" type="Sprite2D" parent="." unique_id=2035380443]
+position = Vector2(575, 325)
+scale = Vector2(1.794, 1.794)
+texture = SubResource("CompressedTexture2D_sknna")

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://rapf61sw3taq"]
+
+[ext_resource type="Texture2D" uid="uid://cu32gg1ug1nq5" path="res://aspite/ซ้าย.jpg" id="1_vhxaa"]
+
+[node name="Node2D" type="Node2D" unique_id=728535026]
+
+[node name="ซ้าย" type="Sprite2D" parent="." unique_id=924948773]
+position = Vector2(575, 325)
+scale = Vector2(1.794, 1.794)
+texture = ExtResource("1_vhxaa")

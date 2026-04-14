@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://05ojne0xp3jp"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_bfyfx"]
+load_path = "res://.godot/imported/หลัง.jpg-2a8a6aae0d4b65e11894a0b814cf07bc.ctex"
+
+[node name="Node2D" type="Node2D" unique_id=699956836]
+
+[node name="หลัง" type="Sprite2D" parent="." unique_id=659111385]
+position = Vector2(575, 325)
+scale = Vector2(1.794, 1.794)
+texture = SubResource("CompressedTexture2D_bfyfx")
