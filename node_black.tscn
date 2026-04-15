@@ -1,11 +1,14 @@
 [gd_scene format=3 uid="uid://05ojne0xp3jp"]
 
+[ext_resource type="Script" uid="uid://03mpohtmmbdn" path="res://node_black.gd" id="1_6io5r"]
 [ext_resource type="Texture2D" uid="uid://bq4seep3iqxif" path="res://aspite/ออฟเจ็คตู้(ทำเผื่อไว้ใช้).png" id="1_l83k2"]
+[ext_resource type="Texture2D" uid="uid://hr1qdb4h17lt" path="res://aspite/ลูกศร1.png" id="2_6io5r"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_bfyfx"]
 load_path = "res://.godot/imported/หลัง.jpg-2a8a6aae0d4b65e11894a0b814cf07bc.ctex"
 
 [node name="Node2D" type="Node2D" unique_id=699956836]
+script = ExtResource("1_6io5r")
 
 [node name="หลัง" type="Sprite2D" parent="." unique_id=659111385]
 position = Vector2(575, 325)
@@ -23,3 +26,42 @@ position = Vector2(39, -5)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ออฟเจ็คตู้(ทำเผื่อไว้ใช้)/Area2D" unique_id=2029588673]
 polygon = PackedVector2Array(-112, 66, 11, 85, 36, 66, 31, -50, -8, -56, -9, -68, -52, -75, -68, -63, -91, -66, -110, -50)
+
+[node name="ลูกศร1" type="Sprite2D" parent="." unique_id=707665643]
+position = Vector2(26, 335)
+rotation = 3.1415927
+texture = ExtResource("2_6io5r")
+region_enabled = true
+region_rect = Rect2(128, 152, 48, 32)
+
+[node name="ลูกศร1" type="Button" parent="ลูกศร1" unique_id=1934313723]
+anchors_preset = -1
+anchor_left = 0.47000003
+anchor_top = 0.5
+anchor_right = 0.47000003
+anchor_bottom = 0.5
+offset_left = -48.560005
+offset_top = -41.0
+offset_right = 1.1487579
+offset_bottom = 11.162201
+metadata/_edit_use_anchors_ = true
+
+[node name="ลูกศร2" type="Sprite2D" parent="." unique_id=433057648]
+position = Vector2(1128, 344)
+texture = ExtResource("2_6io5r")
+region_enabled = true
+region_rect = Rect2(128, 152, 48, 32)
+
+[node name="ลูกศร2" type="Button" parent="ลูกศร2" unique_id=1488226467]
+anchors_preset = -1
+anchor_left = 0.47000003
+anchor_top = 0.5
+anchor_right = 0.47000003
+anchor_bottom = 0.5
+offset_left = -49.56
+offset_top = -42.0
+offset_right = 0.14873886
+offset_bottom = 10.162201
+
+[connection signal="pressed" from="ลูกศร1/ลูกศร1" to="." method="_on_ลูกศร1_pressed"]
+[connection signal="pressed" from="ลูกศร2/ลูกศร2" to="." method="_on_ลูกศร2_pressed"]

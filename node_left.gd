@@ -1,0 +1,16 @@
+extends Node2D
+
+func _on_ลูกศรซ้ายl_mouse_entered() -> void:
+	get_tree().change_scene_to_file("res://node_black.tscn")
+
+
+func _on_ลูกศรขวาl_mouse_entered() -> void:
+	get_tree().change_scene_to_file("res://node_front.tscn")
+
+
+func _on_ลูกศรซ้ายl_pressed() -> void:
+	pass # Replace with function body.
+
+
+func _on_ลูกศรขวาl_pressed() -> void:
+	pass # Replace with function body.

@@ -1,10 +1,52 @@
 [gd_scene format=3 uid="uid://cg6wd1b6vcd83"]
 
 [ext_resource type="Texture2D" uid="uid://btgnoqe0ak4xs" path="res://aspite/ขวา.jpg" id="1_f6ocx"]
+[ext_resource type="Script" uid="uid://bf3ueo2i6fcd8" path="res://node_right.gd" id="1_on4g8"]
+[ext_resource type="Texture2D" uid="uid://hr1qdb4h17lt" path="res://aspite/ลูกศร1.png" id="3_6vje6"]
 
 [node name="Node2D" type="Node2D" unique_id=1380025109]
+script = ExtResource("1_on4g8")
 
 [node name="ขวา" type="Sprite2D" parent="." unique_id=672440293]
 position = Vector2(575, 325)
 scale = Vector2(1.794, 1.794)
 texture = ExtResource("1_f6ocx")
+
+[node name="ลูกศร1" type="Sprite2D" parent="." unique_id=125909013]
+position = Vector2(26, 335)
+rotation = 3.1415927
+texture = ExtResource("3_6vje6")
+region_enabled = true
+region_rect = Rect2(128, 152, 48, 32)
+
+[node name="ลูกศรซ้ายR" type="Button" parent="ลูกศร1" unique_id=513133288]
+anchors_preset = -1
+anchor_left = 0.47000003
+anchor_top = 0.5
+anchor_right = 0.47000003
+anchor_bottom = 0.5
+offset_left = -48.560005
+offset_top = -41.0
+offset_right = 1.1487579
+offset_bottom = 11.162201
+metadata/_edit_use_anchors_ = true
+
+[node name="ลูกศร2" type="Sprite2D" parent="." unique_id=686598278]
+position = Vector2(1128, 344)
+texture = ExtResource("3_6vje6")
+region_enabled = true
+region_rect = Rect2(128, 152, 48, 32)
+
+[node name="ลูกศรขวาR" type="Button" parent="ลูกศร2" unique_id=484160569]
+anchors_preset = -1
+anchor_left = 0.47000003
+anchor_top = 0.5
+anchor_right = 0.47000003
+anchor_bottom = 0.5
+offset_left = -49.56
+offset_top = -42.0
+offset_right = 0.14873886
+offset_bottom = 10.162201
+
+[connection signal="pressed" from="ลูกศร1/ลูกศรซ้ายR" to="." method="_on_ลูกศรซ้ายr_pressed"]
+[connection signal="pressed" from="ลูกศร2/ลูกศรขวาR" to="." method="_on_ลูกศรขวาr_pressed"]
