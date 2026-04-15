@@ -1,5 +1,8 @@
 [gd_scene format=3 uid="uid://d2tr88q7b5crn"]
 
+[ext_resource type="Texture2D" uid="uid://bihdl0iper6ar" path="res://aspite/ออฟเจ็คตัวใส่รหัส.png" id="1_85au8"]
+[ext_resource type="Script" uid="uid://c264pg3f4rrx2" path="res://เครื่องใส่รหัส.gd" id="2_ri0mq"]
+
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_sknna"]
 load_path = "res://.godot/imported/หน้า.jpg-113561f1302101dbec5eb14a9350f15f.ctex"
 
@@ -9,3 +12,17 @@ load_path = "res://.godot/imported/หน้า.jpg-113561f1302101dbec5eb14a9350
 position = Vector2(575, 325)
 scale = Vector2(1.794, 1.794)
 texture = SubResource("CompressedTexture2D_sknna")
+
+[node name="เครื่องใส่รหัส" type="Sprite2D" parent="." unique_id=1538354226]
+position = Vector2(683.00006, 392)
+scale = Vector2(0.15990993, 0.15990993)
+texture = ExtResource("1_85au8")
+region_enabled = true
+region_rect = Rect2(205, 16.5, 222, 330)
+script = ExtResource("2_ri0mq")
+
+[node name="Button" type="Button" parent="." unique_id=1540895777]
+offset_left = 668.0
+offset_top = 383.0
+offset_right = 676.0
+offset_bottom = 391.0
