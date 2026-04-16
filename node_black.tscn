@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://03mpohtmmbdn" path="res://node_black.gd" id="1_6io5r"]
 [ext_resource type="Texture2D" uid="uid://bq4seep3iqxif" path="res://aspite/ออฟเจ็คตู้(ทำเผื่อไว้ใช้).png" id="1_l83k2"]
 [ext_resource type="Texture2D" uid="uid://hr1qdb4h17lt" path="res://aspite/ลูกศร1.png" id="2_6io5r"]
+[ext_resource type="Texture2D" uid="uid://suf5xnwcgw3m" path="res://aspite/ออฟเจ็คตู้เปิด.png" id="4_0addf"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_bfyfx"]
 load_path = "res://.godot/imported/หลัง.jpg-2a8a6aae0d4b65e11894a0b814cf07bc.ctex"
@@ -63,5 +64,17 @@ offset_top = -42.0
 offset_right = 0.14873886
 offset_bottom = 10.162201
 
+[node name="ออฟเจ็คตู้เปิด" type="Sprite2D" parent="." unique_id=582737071]
+visible = false
+position = Vector2(944, 467)
+texture = ExtResource("4_0addf")
+
+[node name="offjectLocker" type="Area2D" parent="ออฟเจ็คตู้เปิด" unique_id=206837499]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ออฟเจ็คตู้เปิด/offjectLocker" unique_id=1774997769]
+polygon = PackedVector2Array(107, 2, 107, 129, 71, 110, -51, 93, -99, 104, -100, -15, -51, -25, -30, -41, -7, -39, 6, -51, 51, -44, 52, -31, 91, -26, 93, -3)
+
+[connection signal="input_event" from="ออฟเจ็คตู้(ทำเผื่อไว้ใช้)/Area2D" to="." method="_on_area_2d_input_event"]
 [connection signal="pressed" from="ลูกศร1/ลูกศร1" to="." method="_on_ลูกศร1_pressed"]
 [connection signal="pressed" from="ลูกศร2/ลูกศร2" to="." method="_on_ลูกศร2_pressed"]
+[connection signal="input_event" from="ออฟเจ็คตู้เปิด/offjectLocker" to="." method="_on_offject_locker_input_event"]
