@@ -5,6 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://cqxjop6c8vpaw" path="res://aspite/รหัสถูก.png" id="4_to6qn"]
 [ext_resource type="Texture2D" uid="uid://wmb3dhur2i6t" path="res://aspite/รหัสผิด.png" id="5_11qxp"]
 [ext_resource type="Texture2D" uid="uid://hr1qdb4h17lt" path="res://aspite/ลูกศร1.png" id="5_to6qn"]
+[ext_resource type="Texture2D" uid="uid://seeh5cubpsiy" path="res://aspite/ไม่มีอะไรอิสเตอร์เฉยๆ.jpg" id="6_to6qn"]
+[ext_resource type="Texture2D" uid="uid://cgpoacqr80d4f" path="res://aspite/เครื้องหมาย.png" id="7_11qxp"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_sknna"]
 load_path = "res://.godot/imported/หน้า.jpg-113561f1302101dbec5eb14a9350f15f.ctex"
@@ -14,6 +16,12 @@ size = Vector2(30, 46)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pqepv"]
 size = Vector2(214, 321)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cc03a"]
+size = Vector2(428.5216, 237.5799)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_c5ghx"]
+radius = 22.17121
 
 [node name="Node2D" type="Node2D" unique_id=2099238146]
 script = ExtResource("1_11qxp")
@@ -98,6 +106,41 @@ texture = ExtResource("1_85au8")
 position = Vector2(-4, -1.5)
 shape = SubResource("RectangleShape2D_pqepv")
 
+[node name="กระดานดำ" type="Sprite2D" parent="." unique_id=2098259059]
+position = Vector2(303, 318)
+scale = Vector2(0.1960228, 0.23991933)
+texture = ExtResource("6_to6qn")
+region_enabled = true
+region_rect = Rect2(104, 56, 440, 248)
+
+[node name="nonezoom" type="Area2D" parent="กระดานดำ" unique_id=1244002733]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="กระดานดำ/nonezoom" unique_id=484711263]
+position = Vector2(-5.1014404, -2.0839844)
+shape = SubResource("RectangleShape2D_cc03a")
+
+[node name="กระดานดำขยาย" type="Sprite2D" parent="." unique_id=1103555189]
+visible = false
+position = Vector2(596, 369)
+texture = ExtResource("6_to6qn")
+region_enabled = true
+region_rect = Rect2(104, 56, 440, 248)
+
+[node name="เครื้องหมาย" type="Sprite2D" parent="กระดานดำขยาย" unique_id=719965302]
+position = Vector2(190, -95)
+texture = ExtResource("7_11qxp")
+region_enabled = true
+region_rect = Rect2(64, 88, 48, 48)
+
+[node name="zoom" type="Area2D" parent="กระดานดำขยาย/เครื้องหมาย" unique_id=920397654]
+position = Vector2(-190, 95)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="กระดานดำขยาย/เครื้องหมาย/zoom" unique_id=1856167669]
+position = Vector2(193, -96)
+shape = SubResource("CircleShape2D_c5ghx")
+
 [connection signal="input_event" from="ออฟเจ็คตัวใส่รหัส2/Area2D" to="." method="_on_area_2d_input_event"]
 [connection signal="pressed" from="ลูกศร1/ลูกซ้ายf" to="." method="_on_ลูกซ้ายf_pressed"]
 [connection signal="pressed" from="ลูกศร2/ลูกศรขวาf" to="." method="_on_ลูกศรขวาf_pressed"]
+[connection signal="input_event" from="กระดานดำ/nonezoom" to="." method="_on_nonezoom_input_event"]
+[connection signal="input_event" from="กระดานดำขยาย/เครื้องหมาย/zoom" to="." method="_on_zoom_input_event"]

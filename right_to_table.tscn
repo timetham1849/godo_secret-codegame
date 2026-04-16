@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://ckfcf4ytfekp5"]
+
+[ext_resource type="Texture2D" uid="uid://d0k6x3r5vrf4c" path="res://aspite/โต๊ะ (1).png" id="1_nlila"]
+
+[node name="Node2D" type="Node2D" unique_id=1885410076]
+
+[node name="โต๊ะ(1)" type="Sprite2D" parent="." unique_id=1571083180]
+position = Vector2(577, 321.5)
+scale = Vector2(1.80625, 1.7805556)
+texture = ExtResource("1_nlila")
