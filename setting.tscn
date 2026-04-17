@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://d1e3g2e0cumvx"]
+
+[ext_resource type="Script" uid="uid://cmwibcuo35gke" path="res://setting.gd" id="1_110nh"]
+[ext_resource type="Texture2D" uid="uid://c7qfq083wn221" path="res://หน้า.png" id="1_a42w7"]
+[ext_resource type="Script" uid="uid://c5fmop1pw1pe" path="res://h_slider.gd" id="3_lv82f"]
+
+[sub_resource type="Theme" id="Theme_lv82f"]
+
+[node name="setting" type="Node2D" unique_id=1285398309]
+script = ExtResource("1_110nh")
+
+[node name="หน้า" type="Sprite2D" parent="." unique_id=1584167948]
+position = Vector2(965.00006, 538)
+scale = Vector2(3, 3)
+texture = ExtResource("1_a42w7")
+
+[node name="back" type="Button" parent="." unique_id=1169134667]
+offset_left = 63.0
+offset_top = 922.0
+offset_right = 300.0
+offset_bottom = 1011.0
+theme_override_font_sizes/font_size = 32
+text = "BACK"
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1684090950]
+offset_left = 415.0
+offset_top = 188.0
+offset_right = 1525.0
+offset_bottom = 602.0
+color = Color(1, 1, 1, 0.7490196)
+
+[node name="HSlider" type="HSlider" parent="." unique_id=2115414330]
+offset_left = 731.0
+offset_top = 363.0
+offset_right = 1320.0
+offset_bottom = 438.0
+value = 100.0
+script = ExtResource("3_lv82f")
+
+[node name="Label" type="Label" parent="." unique_id=1876866389]
+offset_left = 879.0
+offset_top = 196.0
+offset_right = 1092.0
+offset_bottom = 298.0
+theme = SubResource("Theme_lv82f")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 64
+text = "Audio"
+
+[node name="Label2" type="Label" parent="." unique_id=495996725]
+offset_left = 426.0
+offset_top = 352.0
+offset_right = 639.0
+offset_bottom = 454.0
+theme = SubResource("Theme_lv82f")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 64
+text = "Sound"
+
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]
