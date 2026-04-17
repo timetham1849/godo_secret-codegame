@@ -51,7 +51,6 @@ position = Vector2(683, 391)
 shape = SubResource("RectangleShape2D_ri0mq")
 
 [node name="ออฟเจ็คตัวใส่รหัส" type="Sprite2D" parent="." unique_id=651201386]
-visible = false
 position = Vector2(565, 394)
 texture = ExtResource("1_85au8")
 
@@ -73,6 +72,15 @@ texture = ExtResource("4_to6qn")
 [node name="รหัสผิด" type="Sprite2D" parent="ออฟเจ็คตัวใส่รหัส" unique_id=1899828210]
 visible = false
 texture = ExtResource("5_11qxp")
+
+[node name="TextEdit" type="TextEdit" parent="ออฟเจ็คตัวใส่รหัส" unique_id=1822177178]
+offset_left = -84.0
+offset_top = -135.0
+offset_right = 79.0
+offset_bottom = -79.0
+theme_override_colors/font_color = Color(0.3019608, 0.3019608, 0.3019608, 1)
+theme_override_font_sizes/font_size = 36
+text = "1 2 3 4 5"
 
 [node name="ลูกศร1" type="Sprite2D" parent="." unique_id=357557585]
 position = Vector2(26, 335)
