@@ -1,43 +1,45 @@
 [gd_scene format=3 uid="uid://cc2xkosgoyxbi"]
 
-[ext_resource type="Texture2D" uid="uid://c7qfq083wn221" path="res://หน้า.png" id="1_dolsu"]
 [ext_resource type="Script" uid="uid://hjnhfovb5140" path="res://Menu.gd" id="2_n4eug"]
 [ext_resource type="Script" uid="uid://cd06e7t1l6r2w" path="res://start.gd" id="3_dlksc"]
 [ext_resource type="Script" uid="uid://nrh1pegkvsws" path="res://options.gd" id="4_hcwhg"]
 [ext_resource type="Script" uid="uid://bavedre4827dd" path="res://exit.gd" id="5_5p1lm"]
 
 [node name="menu" type="Sprite2D" unique_id=672227313]
-position = Vector2(963, 537)
+position = Vector2(1089, 342)
 scale = Vector2(3, 3)
-texture = ExtResource("1_dolsu")
 script = ExtResource("2_n4eug")
 
 [node name="start" type="Button" parent="." unique_id=18965380]
-offset_left = -264.33334
-offset_top = -120.333336
-offset_right = -79.33331
-offset_bottom = -78.33333
+offset_left = -263.0
+offset_top = -108.333336
+offset_right = -77.99997
+offset_bottom = -55.333336
 theme_override_font_sizes/font_size = 32
 text = "START"
 script = ExtResource("3_dlksc")
+metadata/_edit_use_anchors_ = true
 
 [node name="Options" type="Button" parent="." unique_id=1418706455]
-offset_left = -264.33334
-offset_top = -27.999994
-offset_right = -79.33331
-offset_bottom = 25.000006
+offset_left = -263.6667
+offset_top = -34.33333
+offset_right = -78.66666
+offset_bottom = 18.666672
 theme_override_font_sizes/font_size = 32
 text = "OPTIONS"
 script = ExtResource("4_hcwhg")
+metadata/_edit_use_anchors_ = true
 
 [node name="EXIT" type="Button" parent="." unique_id=49322564]
-offset_left = -263.0
-offset_top = 58.000008
-offset_right = -77.99997
-offset_bottom = 111.00001
+offset_left = -265.0
+offset_top = 44.666664
+offset_right = -79.99997
+offset_bottom = 97.666664
 theme_override_font_sizes/font_size = 32
 text = "EXIT"
 script = ExtResource("5_5p1lm")
+metadata/_edit_use_anchors_ = true
 
+[connection signal="pressed" from="start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Options" to="Options" method="_on_pressed"]
 [connection signal="pressed" from="EXIT" to="EXIT" method="_on_pressed"]

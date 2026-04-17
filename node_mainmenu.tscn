@@ -1,3 +1,9 @@
 [gd_scene format=3 uid="uid://dm1w58afusyty"]
 
+[ext_resource type="PackedScene" uid="uid://cc2xkosgoyxbi" path="res://Menu.tscn" id="1_sma2g"]
+
 [node name="Node2D" type="Node2D" unique_id=128270879]
+
+[node name="menu" parent="." unique_id=672227313 instance=ExtResource("1_sma2g")]
+position = Vector2(1036, 348)
+texture = null
