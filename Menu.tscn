@@ -11,30 +11,45 @@ scale = Vector2(3, 3)
 script = ExtResource("2_n4eug")
 
 [node name="start" type="Button" parent="." unique_id=18965380]
-offset_left = -263.0
-offset_top = -108.333336
-offset_right = -77.99997
-offset_bottom = -55.333336
+anchors_preset = -1
+anchor_left = -170.50002
+anchor_top = -81.833
+anchor_right = -170.50002
+anchor_bottom = -81.833
+offset_left = -92.499985
+offset_top = -26.500336
+offset_right = 92.500046
+offset_bottom = 26.499664
 theme_override_font_sizes/font_size = 32
 text = "START"
 script = ExtResource("3_dlksc")
 metadata/_edit_use_anchors_ = true
 
 [node name="Options" type="Button" parent="." unique_id=1418706455]
-offset_left = -263.6667
-offset_top = -34.33333
-offset_right = -78.66666
-offset_bottom = 18.666672
+anchors_preset = -1
+anchor_left = -171.167
+anchor_top = -7.833
+anchor_right = -171.167
+anchor_bottom = -7.833
+offset_left = -92.49968
+offset_top = -26.500328
+offset_right = 92.50035
+offset_bottom = 26.499672
 theme_override_font_sizes/font_size = 32
 text = "OPTIONS"
 script = ExtResource("4_hcwhg")
 metadata/_edit_use_anchors_ = true
 
 [node name="EXIT" type="Button" parent="." unique_id=49322564]
-offset_left = -265.0
-offset_top = 44.666664
-offset_right = -79.99997
-offset_bottom = 97.666664
+anchors_preset = -1
+anchor_left = -172.50002
+anchor_top = 71.167
+anchor_right = -172.50002
+anchor_bottom = 71.167
+offset_left = -92.499985
+offset_top = -26.500336
+offset_right = 92.500046
+offset_bottom = 26.499664
 theme_override_font_sizes/font_size = 32
 text = "EXIT"
 script = ExtResource("5_5p1lm")

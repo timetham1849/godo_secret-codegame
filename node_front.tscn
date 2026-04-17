@@ -51,6 +51,7 @@ position = Vector2(683, 391)
 shape = SubResource("RectangleShape2D_ri0mq")
 
 [node name="ออฟเจ็คตัวใส่รหัส" type="Sprite2D" parent="." unique_id=651201386]
+visible = false
 position = Vector2(565, 394)
 texture = ExtResource("1_85au8")
 

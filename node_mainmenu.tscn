@@ -1,9 +1,54 @@
 [gd_scene format=3 uid="uid://dm1w58afusyty"]
 
-[ext_resource type="PackedScene" uid="uid://cc2xkosgoyxbi" path="res://Menu.tscn" id="1_sma2g"]
+[ext_resource type="Script" uid="uid://cqsoj6jxupych" path="res://node_mainmenu.gd" id="1_r0cfj"]
 
 [node name="Node2D" type="Node2D" unique_id=128270879]
+script = ExtResource("1_r0cfj")
 
-[node name="menu" parent="." unique_id=672227313 instance=ExtResource("1_sma2g")]
-position = Vector2(1036, 348)
-texture = null
+[node name="menu" type="Sprite2D" parent="." unique_id=593109324]
+
+[node name="start" type="Button" parent="menu" unique_id=2046382759]
+anchors_preset = -1
+anchor_left = 558.0
+anchor_top = 206.00002
+anchor_right = 558.0
+anchor_bottom = 206.00002
+offset_left = -135.0
+offset_top = -50.000015
+offset_right = 135.0
+offset_bottom = 49.999985
+theme_override_font_sizes/font_size = 32
+text = "START"
+metadata/_edit_use_anchors_ = true
+
+[node name="Options" type="Button" parent="menu" unique_id=651113748]
+anchors_preset = -1
+anchor_left = 559.0
+anchor_top = 329.00003
+anchor_right = 559.0
+anchor_bottom = 329.00003
+offset_left = -135.0
+offset_top = -50.00003
+offset_right = 135.0
+offset_bottom = 49.99997
+theme_override_font_sizes/font_size = 32
+text = "OPTIONS"
+metadata/_edit_use_anchors_ = true
+
+[node name="EXIT" type="Button" parent="menu" unique_id=1112097495]
+anchors_preset = -1
+anchor_left = 558.0
+anchor_top = 460.00003
+anchor_right = 558.0
+anchor_bottom = 460.00003
+offset_left = -135.0
+offset_top = -50.00003
+offset_right = 135.0
+offset_bottom = 49.99997
+theme_override_font_sizes/font_size = 32
+text = "EXIT"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="menu/start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="menu/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="menu/EXIT" to="." method="_on_exit_pressed"]
