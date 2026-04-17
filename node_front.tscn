@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dwkri6ogmyq4m" path="res://node_front.gd" id="1_11qxp"]
 [ext_resource type="Texture2D" uid="uid://bihdl0iper6ar" path="res://aspite/ออฟเจ็คตัวใส่รหัส.png" id="1_85au8"]
+[ext_resource type="Texture2D" uid="uid://ckve8pr2wl4sd" path="res://aspite/กากากบาท.png" id="3_cc03a"]
 [ext_resource type="Texture2D" uid="uid://cqxjop6c8vpaw" path="res://aspite/รหัสถูก.png" id="4_to6qn"]
 [ext_resource type="Texture2D" uid="uid://wmb3dhur2i6t" path="res://aspite/รหัสผิด.png" id="5_11qxp"]
 [ext_resource type="Texture2D" uid="uid://hr1qdb4h17lt" path="res://aspite/ลูกศร1.png" id="5_to6qn"]
@@ -13,6 +14,9 @@ load_path = "res://.godot/imported/หน้า.jpg-113561f1302101dbec5eb14a9350
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ri0mq"]
 size = Vector2(30, 46)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c5ghx"]
+size = Vector2(29.555565, 30.239979)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pqepv"]
 size = Vector2(214, 321)
@@ -47,8 +51,20 @@ position = Vector2(683, 391)
 shape = SubResource("RectangleShape2D_ri0mq")
 
 [node name="ออฟเจ็คตัวใส่รหัส" type="Sprite2D" parent="." unique_id=651201386]
+visible = false
 position = Vector2(565, 394)
 texture = ExtResource("1_85au8")
+
+[node name="กากากบาท" type="Sprite2D" parent="ออฟเจ็คตัวใส่รหัส" unique_id=565568544]
+position = Vector2(92, -151.5)
+scale = Vector2(0.6428572, 0.59523845)
+texture = ExtResource("3_cc03a")
+
+[node name="ปิดตัวใส่รหัส" type="Area2D" parent="ออฟเจ็คตัวใส่รหัส/กากากบาท" unique_id=309068912]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ออฟเจ็คตัวใส่รหัส/กากากบาท/ปิดตัวใส่รหัส" unique_id=680895126]
+position = Vector2(0.777771, 0.83999634)
+shape = SubResource("RectangleShape2D_c5ghx")
 
 [node name="รหัสถูก" type="Sprite2D" parent="ออฟเจ็คตัวใส่รหัส" unique_id=1779111073]
 visible = false
@@ -139,6 +155,7 @@ position = Vector2(193, -96)
 shape = SubResource("CircleShape2D_c5ghx")
 
 [connection signal="input_event" from="ออฟเจ็คตัวใส่รหัส2/c_password" to="." method="_on_c_password_input_event"]
+[connection signal="input_event" from="ออฟเจ็คตัวใส่รหัส/กากากบาท/ปิดตัวใส่รหัส" to="." method="_on_ปิดตัวใส่รหัส_input_event"]
 [connection signal="pressed" from="ลูกศร1/ลูกซ้ายf" to="." method="_on_ลูกซ้ายf_pressed"]
 [connection signal="pressed" from="ลูกศร2/ลูกศรขวาf" to="." method="_on_ลูกศรขวาf_pressed"]
 [connection signal="input_event" from="กระดานดำ/nonezoom" to="." method="_on_nonezoom_input_event"]
