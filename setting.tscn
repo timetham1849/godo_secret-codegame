@@ -12,10 +12,10 @@ position = Vector2(569.00006, 451)
 scale = Vector2(3, 3)
 
 [node name="back" type="Button" parent="." unique_id=1169134667]
-offset_left = 63.0
-offset_top = 922.0
-offset_right = 300.0
-offset_bottom = 1011.0
+offset_left = 893.0
+offset_top = 543.0
+offset_right = 1130.0
+offset_bottom = 632.0
 theme_override_font_sizes/font_size = 32
 text = "BACK"
 

@@ -30,8 +30,13 @@ func _on_zoom_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> 
 func _on_c_password_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		$"ออฟเจ็คตัวใส่รหัส".visible= true
+		$"กากากบาท".visible= true
+
+
+
 
 
 func _on_ปิดตัวใส่รหัส_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		$"ออฟเจ็คตัวใส่รหัส".visible= false
+		$"กากากบาท".visible= false

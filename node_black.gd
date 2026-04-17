@@ -26,8 +26,8 @@ func _on_area_2d_input_event(viewport, event, shape_idx) -> void:
 			$"ออฟเจ็คตู้เปิด".visible = true
 
 
-func _on_offject_locker_input_event(viewport, event, shape_idx) -> void:
-	if !detail_selec: 
-		if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-			$"ออฟเจ็คตู้(ทำเผื่อไว้ใช้)".visible = true
-			$"ออฟเจ็คตู้เปิด".visible = false
+#func _on_offject_locker_input_event(viewport, event, shape_idx) -> void:
+	#if !detail_selec: 
+		#if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+			#$"ออฟเจ็คตู้(ทำเผื่อไว้ใช้)".visible = true
+			#$"ออฟเจ็คตู้เปิด".visible = false

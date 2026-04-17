@@ -2,12 +2,22 @@
 
 [ext_resource type="Script" uid="uid://dwkri6ogmyq4m" path="res://node_front.gd" id="1_11qxp"]
 [ext_resource type="Texture2D" uid="uid://bihdl0iper6ar" path="res://aspite/ออฟเจ็คตัวใส่รหัส.png" id="1_85au8"]
+[ext_resource type="Texture2D" uid="uid://ckud5abfouqik" path="res://aspite/ปุ่ม1.png" id="3_11qxp"]
 [ext_resource type="Texture2D" uid="uid://ckve8pr2wl4sd" path="res://aspite/กากากบาท.png" id="3_cc03a"]
-[ext_resource type="Texture2D" uid="uid://cqxjop6c8vpaw" path="res://aspite/รหัสถูก.png" id="4_to6qn"]
-[ext_resource type="Texture2D" uid="uid://wmb3dhur2i6t" path="res://aspite/รหัสผิด.png" id="5_11qxp"]
+[ext_resource type="Texture2D" uid="uid://by5vv8usn60fc" path="res://aspite/ปุ่ม2.png" id="4_xsuhe"]
+[ext_resource type="Texture2D" uid="uid://byxbeaop41imj" path="res://aspite/ปุ่ม3.png" id="5_kpprb"]
 [ext_resource type="Texture2D" uid="uid://hr1qdb4h17lt" path="res://aspite/ลูกศร1.png" id="5_to6qn"]
+[ext_resource type="Texture2D" uid="uid://btftmkjg1krto" path="res://aspite/ปุ่ม4.png" id="6_nermb"]
 [ext_resource type="Texture2D" uid="uid://seeh5cubpsiy" path="res://aspite/ไม่มีอะไรอิสเตอร์เฉยๆ.jpg" id="6_to6qn"]
 [ext_resource type="Texture2D" uid="uid://cgpoacqr80d4f" path="res://aspite/เครื้องหมาย.png" id="7_11qxp"]
+[ext_resource type="Texture2D" uid="uid://d1guih7vfglte" path="res://aspite/ปุ่ม5.png" id="7_71ql5"]
+[ext_resource type="Texture2D" uid="uid://bk674ysml5g33" path="res://aspite/ปุ่ม6.png" id="8_rgch3"]
+[ext_resource type="Texture2D" uid="uid://4ju7geguleem" path="res://aspite/ปุ่ม7.png" id="9_1ms2x"]
+[ext_resource type="Texture2D" uid="uid://brenita602l7m" path="res://aspite/ปุ่ม8.png" id="10_4nsxh"]
+[ext_resource type="Texture2D" uid="uid://cdvjret2ds10l" path="res://aspite/ปุ่ม9.png" id="11_fpu8l"]
+[ext_resource type="Texture2D" uid="uid://xpiiwf6nfe0s" path="res://aspite/ปุ่มแดง.png" id="12_s1p3m"]
+[ext_resource type="Texture2D" uid="uid://dmoxda63frcuv" path="res://aspite/ปุ่ม0.png" id="13_f4ovn"]
+[ext_resource type="Texture2D" uid="uid://d0d41e2s5po2f" path="res://aspite/ปุ่มเขียว.png" id="14_ii2k4"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_sknna"]
 load_path = "res://.godot/imported/หน้า.jpg-113561f1302101dbec5eb14a9350f15f.ctex"
@@ -17,9 +27,6 @@ size = Vector2(30, 46)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c5ghx"]
 size = Vector2(29.555565, 30.239979)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_pqepv"]
-size = Vector2(214, 321)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cc03a"]
 size = Vector2(428.5216, 237.5799)
@@ -51,37 +58,97 @@ position = Vector2(683, 391)
 shape = SubResource("RectangleShape2D_ri0mq")
 
 [node name="ออฟเจ็คตัวใส่รหัส" type="Sprite2D" parent="." unique_id=651201386]
-visible = false
-position = Vector2(565, 394)
+position = Vector2(561, 392)
 texture = ExtResource("1_85au8")
 
-[node name="กากากบาท" type="Sprite2D" parent="ออฟเจ็คตัวใส่รหัส" unique_id=565568544]
-position = Vector2(92, -151.5)
+[node name="RichTextLabel" type="RichTextLabel" parent="ออฟเจ็คตัวใส่รหัส" unique_id=896745019]
+offset_left = -85.0
+offset_top = -135.0
+offset_right = 78.0
+offset_bottom = -80.0
+theme_override_font_sizes/normal_font_size = 36
+theme_override_font_sizes/bold_font_size = 36
+theme_override_font_sizes/bold_italics_font_size = 36
+theme_override_font_sizes/italics_font_size = 36
+theme_override_font_sizes/mono_font_size = 36
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ออฟเจ็คตัวใส่รหัส" unique_id=891176960]
+offset_left = -102.0
+offset_top = -60.0
+offset_right = 103.0
+offset_bottom = 152.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ออฟเจ็คตัวใส่รหัส/VBoxContainer" unique_id=1070722568]
+layout_mode = 2
+
+[node name="Button1" type="Button" parent="ออฟเจ็คตัวใส่รหัส/VBoxContainer/HBoxContainer" unique_id=1121143908]
+layout_mode = 2
+icon = ExtResource("3_11qxp")
+
+[node name="Button2" type="Button" parent="ออฟเจ็คตัวใส่รหัส/VBoxContainer/HBoxContainer" unique_id=1806158813]
+layout_mode = 2
+icon = ExtResource("4_xsuhe")
+
+[node name="Button3" type="Button" parent="ออฟเจ็คตัวใส่รหัส/VBoxContainer/HBoxContainer" unique_id=511423598]
+layout_mode = 2
+icon = ExtResource("5_kpprb")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="ออฟเจ็คตัวใส่รหัส/VBoxContainer" unique_id=1245426616]
+layout_mode = 2
+
+[node name="Button4" type="Button" parent="ออฟเจ็คตัวใส่รหัส/VBoxContainer/HBoxContainer2" unique_id=2107403236]
+layout_mode = 2
+icon = ExtResource("6_nermb")
+
+[node name="Button5" type="Button" parent="ออฟเจ็คตัวใส่รหัส/VBoxContainer/HBoxContainer2" unique_id=754809272]
+layout_mode = 2
+icon = ExtResource("7_71ql5")
+
+[node name="Button6" type="Button" parent="ออฟเจ็คตัวใส่รหัส/VBoxContainer/HBoxContainer2" unique_id=865792032]
+layout_mode = 2
+icon = ExtResource("8_rgch3")
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="ออฟเจ็คตัวใส่รหัส/VBoxContainer" unique_id=1945353060]
+layout_mode = 2
+
+[node name="Button7" type="Button" parent="ออฟเจ็คตัวใส่รหัส/VBoxContainer/HBoxContainer3" unique_id=1507129523]
+layout_mode = 2
+icon = ExtResource("9_1ms2x")
+
+[node name="Button8" type="Button" parent="ออฟเจ็คตัวใส่รหัส/VBoxContainer/HBoxContainer3" unique_id=217349039]
+layout_mode = 2
+icon = ExtResource("10_4nsxh")
+
+[node name="Button9" type="Button" parent="ออฟเจ็คตัวใส่รหัส/VBoxContainer/HBoxContainer3" unique_id=28753880]
+layout_mode = 2
+icon = ExtResource("11_fpu8l")
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="ออฟเจ็คตัวใส่รหัส/VBoxContainer" unique_id=708722657]
+layout_mode = 2
+
+[node name="Buttonred_delete" type="Button" parent="ออฟเจ็คตัวใส่รหัส/VBoxContainer/HBoxContainer4" unique_id=1055641696]
+layout_mode = 2
+icon = ExtResource("12_s1p3m")
+
+[node name="Button0" type="Button" parent="ออฟเจ็คตัวใส่รหัส/VBoxContainer/HBoxContainer4" unique_id=1414578686]
+layout_mode = 2
+icon = ExtResource("13_f4ovn")
+
+[node name="Buttongreen_accept" type="Button" parent="ออฟเจ็คตัวใส่รหัส/VBoxContainer/HBoxContainer4" unique_id=3537194]
+layout_mode = 2
+icon = ExtResource("14_ii2k4")
+
+[node name="กากากบาท" type="Sprite2D" parent="." unique_id=565568544]
+visible = false
+position = Vector2(657, 242.5)
 scale = Vector2(0.6428572, 0.59523845)
 texture = ExtResource("3_cc03a")
 
-[node name="ปิดตัวใส่รหัส" type="Area2D" parent="ออฟเจ็คตัวใส่รหัส/กากากบาท" unique_id=309068912]
+[node name="ปิดตัวใส่รหัส" type="Area2D" parent="กากากบาท" unique_id=309068912]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ออฟเจ็คตัวใส่รหัส/กากากบาท/ปิดตัวใส่รหัส" unique_id=680895126]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="กากากบาท/ปิดตัวใส่รหัส" unique_id=680895126]
 position = Vector2(0.777771, 0.83999634)
 shape = SubResource("RectangleShape2D_c5ghx")
-
-[node name="รหัสถูก" type="Sprite2D" parent="ออฟเจ็คตัวใส่รหัส" unique_id=1779111073]
-visible = false
-texture = ExtResource("4_to6qn")
-
-[node name="รหัสผิด" type="Sprite2D" parent="ออฟเจ็คตัวใส่รหัส" unique_id=1899828210]
-visible = false
-texture = ExtResource("5_11qxp")
-
-[node name="TextEdit" type="TextEdit" parent="ออฟเจ็คตัวใส่รหัส" unique_id=1822177178]
-offset_left = -84.0
-offset_top = -135.0
-offset_right = 79.0
-offset_bottom = -79.0
-theme_override_colors/font_color = Color(0.3019608, 0.3019608, 0.3019608, 1)
-theme_override_font_sizes/font_size = 36
-text = "1 2 3 4 5"
 
 [node name="ลูกศร1" type="Sprite2D" parent="." unique_id=357557585]
 position = Vector2(26, 335)
@@ -119,17 +186,6 @@ offset_top = -42.0
 offset_right = 0.14873886
 offset_bottom = 10.162201
 
-[node name="ออฟเจ็คตัวใส่รหัส3" type="Sprite2D" parent="." unique_id=1940603902]
-visible = false
-position = Vector2(561, 364)
-texture = ExtResource("1_85au8")
-
-[node name="Area2D" type="Area2D" parent="ออฟเจ็คตัวใส่รหัส3" unique_id=1286955526]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ออฟเจ็คตัวใส่รหัส3/Area2D" unique_id=1735071370]
-position = Vector2(-4, -1.5)
-shape = SubResource("RectangleShape2D_pqepv")
-
 [node name="กระดานดำ" type="Sprite2D" parent="." unique_id=2098259059]
 position = Vector2(303, 318)
 scale = Vector2(0.1960228, 0.23991933)
@@ -164,7 +220,7 @@ position = Vector2(193, -96)
 shape = SubResource("CircleShape2D_c5ghx")
 
 [connection signal="input_event" from="ออฟเจ็คตัวใส่รหัส2/c_password" to="." method="_on_c_password_input_event"]
-[connection signal="input_event" from="ออฟเจ็คตัวใส่รหัส/กากากบาท/ปิดตัวใส่รหัส" to="." method="_on_ปิดตัวใส่รหัส_input_event"]
+[connection signal="input_event" from="กากากบาท/ปิดตัวใส่รหัส" to="." method="_on_ปิดตัวใส่รหัส_input_event"]
 [connection signal="pressed" from="ลูกศร1/ลูกซ้ายf" to="." method="_on_ลูกซ้ายf_pressed"]
 [connection signal="pressed" from="ลูกศร2/ลูกศรขวาf" to="." method="_on_ลูกศรขวาf_pressed"]
 [connection signal="input_event" from="กระดานดำ/nonezoom" to="." method="_on_nonezoom_input_event"]
