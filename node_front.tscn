@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bihdl0iper6ar" path="res://aspite/ออฟเจ็คตัวใส่รหัส.png" id="1_85au8"]
 [ext_resource type="Texture2D" uid="uid://ckud5abfouqik" path="res://aspite/ปุ่ม1.png" id="3_11qxp"]
 [ext_resource type="Texture2D" uid="uid://ckve8pr2wl4sd" path="res://aspite/กากากบาท.png" id="3_cc03a"]
+[ext_resource type="Script" uid="uid://dqyifoccy82q4" path="res://keypad.gd" id="3_kpprb"]
 [ext_resource type="Texture2D" uid="uid://by5vv8usn60fc" path="res://aspite/ปุ่ม2.png" id="4_xsuhe"]
 [ext_resource type="Texture2D" uid="uid://byxbeaop41imj" path="res://aspite/ปุ่ม3.png" id="5_kpprb"]
 [ext_resource type="Texture2D" uid="uid://hr1qdb4h17lt" path="res://aspite/ลูกศร1.png" id="5_to6qn"]
@@ -57,11 +58,21 @@ scale = Vector2(7.2, 7.2)
 position = Vector2(683, 391)
 shape = SubResource("RectangleShape2D_ri0mq")
 
-[node name="ออฟเจ็คตัวใส่รหัส" type="Sprite2D" parent="." unique_id=651201386]
-position = Vector2(561, 392)
+[node name="keypad" type="Control" parent="." unique_id=539837372]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 561.0
+offset_top = 392.0
+offset_right = 601.0
+offset_bottom = 432.0
+script = ExtResource("3_kpprb")
+
+[node name="ออฟเจ็คตัวใส่รหัส" type="Sprite2D" parent="keypad" unique_id=651201386]
 texture = ExtResource("1_85au8")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="ออฟเจ็คตัวใส่รหัส" unique_id=896745019]
+[node name="RichTextLabel" type="RichTextLabel" parent="keypad" unique_id=896745019]
+layout_mode = 0
 offset_left = -85.0
 offset_top = -135.0
 offset_right = 78.0
@@ -72,69 +83,70 @@ theme_override_font_sizes/bold_italics_font_size = 36
 theme_override_font_sizes/italics_font_size = 36
 theme_override_font_sizes/mono_font_size = 36
 
-[node name="VBoxContainer" type="VBoxContainer" parent="ออฟเจ็คตัวใส่รหัส" unique_id=891176960]
+[node name="VBoxContainer" type="VBoxContainer" parent="keypad" unique_id=891176960]
+layout_mode = 0
 offset_left = -102.0
 offset_top = -60.0
-offset_right = 103.0
+offset_right = 97.0
 offset_bottom = 152.0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="ออฟเจ็คตัวใส่รหัส/VBoxContainer" unique_id=1070722568]
+[node name="HBoxContainer" type="HBoxContainer" parent="keypad/VBoxContainer" unique_id=1070722568]
 layout_mode = 2
 
-[node name="Button1" type="Button" parent="ออฟเจ็คตัวใส่รหัส/VBoxContainer/HBoxContainer" unique_id=1121143908]
+[node name="Button1" type="Button" parent="keypad/VBoxContainer/HBoxContainer" unique_id=1121143908]
 layout_mode = 2
 icon = ExtResource("3_11qxp")
 
-[node name="Button2" type="Button" parent="ออฟเจ็คตัวใส่รหัส/VBoxContainer/HBoxContainer" unique_id=1806158813]
+[node name="Button2" type="Button" parent="keypad/VBoxContainer/HBoxContainer" unique_id=1806158813]
 layout_mode = 2
 icon = ExtResource("4_xsuhe")
 
-[node name="Button3" type="Button" parent="ออฟเจ็คตัวใส่รหัส/VBoxContainer/HBoxContainer" unique_id=511423598]
+[node name="Button3" type="Button" parent="keypad/VBoxContainer/HBoxContainer" unique_id=511423598]
 layout_mode = 2
 icon = ExtResource("5_kpprb")
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="ออฟเจ็คตัวใส่รหัส/VBoxContainer" unique_id=1245426616]
+[node name="HBoxContainer2" type="HBoxContainer" parent="keypad/VBoxContainer" unique_id=1245426616]
 layout_mode = 2
 
-[node name="Button4" type="Button" parent="ออฟเจ็คตัวใส่รหัส/VBoxContainer/HBoxContainer2" unique_id=2107403236]
+[node name="Button4" type="Button" parent="keypad/VBoxContainer/HBoxContainer2" unique_id=2107403236]
 layout_mode = 2
 icon = ExtResource("6_nermb")
 
-[node name="Button5" type="Button" parent="ออฟเจ็คตัวใส่รหัส/VBoxContainer/HBoxContainer2" unique_id=754809272]
+[node name="Button5" type="Button" parent="keypad/VBoxContainer/HBoxContainer2" unique_id=754809272]
 layout_mode = 2
 icon = ExtResource("7_71ql5")
 
-[node name="Button6" type="Button" parent="ออฟเจ็คตัวใส่รหัส/VBoxContainer/HBoxContainer2" unique_id=865792032]
+[node name="Button6" type="Button" parent="keypad/VBoxContainer/HBoxContainer2" unique_id=865792032]
 layout_mode = 2
 icon = ExtResource("8_rgch3")
 
-[node name="HBoxContainer3" type="HBoxContainer" parent="ออฟเจ็คตัวใส่รหัส/VBoxContainer" unique_id=1945353060]
+[node name="HBoxContainer3" type="HBoxContainer" parent="keypad/VBoxContainer" unique_id=1945353060]
 layout_mode = 2
 
-[node name="Button7" type="Button" parent="ออฟเจ็คตัวใส่รหัส/VBoxContainer/HBoxContainer3" unique_id=1507129523]
+[node name="Button7" type="Button" parent="keypad/VBoxContainer/HBoxContainer3" unique_id=1507129523]
 layout_mode = 2
 icon = ExtResource("9_1ms2x")
 
-[node name="Button8" type="Button" parent="ออฟเจ็คตัวใส่รหัส/VBoxContainer/HBoxContainer3" unique_id=217349039]
+[node name="Button8" type="Button" parent="keypad/VBoxContainer/HBoxContainer3" unique_id=217349039]
 layout_mode = 2
 icon = ExtResource("10_4nsxh")
 
-[node name="Button9" type="Button" parent="ออฟเจ็คตัวใส่รหัส/VBoxContainer/HBoxContainer3" unique_id=28753880]
+[node name="Button9" type="Button" parent="keypad/VBoxContainer/HBoxContainer3" unique_id=28753880]
 layout_mode = 2
 icon = ExtResource("11_fpu8l")
 
-[node name="HBoxContainer4" type="HBoxContainer" parent="ออฟเจ็คตัวใส่รหัส/VBoxContainer" unique_id=708722657]
+[node name="HBoxContainer4" type="HBoxContainer" parent="keypad/VBoxContainer" unique_id=708722657]
 layout_mode = 2
 
-[node name="Buttonred_delete" type="Button" parent="ออฟเจ็คตัวใส่รหัส/VBoxContainer/HBoxContainer4" unique_id=1055641696]
+[node name="Buttonred_delete" type="Button" parent="keypad/VBoxContainer/HBoxContainer4" unique_id=1055641696]
 layout_mode = 2
 icon = ExtResource("12_s1p3m")
 
-[node name="Button0" type="Button" parent="ออฟเจ็คตัวใส่รหัส/VBoxContainer/HBoxContainer4" unique_id=1414578686]
+[node name="Button0" type="Button" parent="keypad/VBoxContainer/HBoxContainer4" unique_id=1414578686]
 layout_mode = 2
 icon = ExtResource("13_f4ovn")
 
-[node name="Buttongreen_accept" type="Button" parent="ออฟเจ็คตัวใส่รหัส/VBoxContainer/HBoxContainer4" unique_id=3537194]
+[node name="Buttongreen_accept" type="Button" parent="keypad/VBoxContainer/HBoxContainer4" unique_id=3537194]
 layout_mode = 2
 icon = ExtResource("14_ii2k4")
 
@@ -220,6 +232,18 @@ position = Vector2(193, -96)
 shape = SubResource("CircleShape2D_c5ghx")
 
 [connection signal="input_event" from="ออฟเจ็คตัวใส่รหัส2/c_password" to="." method="_on_c_password_input_event"]
+[connection signal="pressed" from="keypad/VBoxContainer/HBoxContainer/Button1" to="keypad" method="_on_button_1_pressed"]
+[connection signal="pressed" from="keypad/VBoxContainer/HBoxContainer/Button2" to="keypad" method="_on_button_2_pressed"]
+[connection signal="pressed" from="keypad/VBoxContainer/HBoxContainer/Button3" to="keypad" method="_on_button_3_pressed"]
+[connection signal="pressed" from="keypad/VBoxContainer/HBoxContainer2/Button4" to="keypad" method="_on_button_4_pressed"]
+[connection signal="pressed" from="keypad/VBoxContainer/HBoxContainer2/Button5" to="keypad" method="_on_button_5_pressed"]
+[connection signal="pressed" from="keypad/VBoxContainer/HBoxContainer2/Button6" to="keypad" method="_on_button_6_pressed"]
+[connection signal="pressed" from="keypad/VBoxContainer/HBoxContainer3/Button7" to="keypad" method="_on_button_7_pressed"]
+[connection signal="pressed" from="keypad/VBoxContainer/HBoxContainer3/Button8" to="keypad" method="_on_button_8_pressed"]
+[connection signal="pressed" from="keypad/VBoxContainer/HBoxContainer3/Button9" to="keypad" method="_on_button_9_pressed"]
+[connection signal="pressed" from="keypad/VBoxContainer/HBoxContainer4/Buttonred_delete" to="keypad" method="_on_buttonred_delete_pressed"]
+[connection signal="pressed" from="keypad/VBoxContainer/HBoxContainer4/Button0" to="keypad" method="_on_button_0_pressed"]
+[connection signal="pressed" from="keypad/VBoxContainer/HBoxContainer4/Buttongreen_accept" to="keypad" method="_on_buttongreen_accept_pressed"]
 [connection signal="input_event" from="กากากบาท/ปิดตัวใส่รหัส" to="." method="_on_ปิดตัวใส่รหัส_input_event"]
 [connection signal="pressed" from="ลูกศร1/ลูกซ้ายf" to="." method="_on_ลูกซ้ายf_pressed"]
 [connection signal="pressed" from="ลูกศร2/ลูกศรขวาf" to="." method="_on_ลูกศรขวาf_pressed"]

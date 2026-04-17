@@ -29,7 +29,7 @@ func _on_zoom_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> 
 
 func _on_c_password_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
-		$"ออฟเจ็คตัวใส่รหัส".visible= true
+		$"keypad".visible= true
 		$"กากากบาท".visible= true
 
 
@@ -38,5 +38,11 @@ func _on_c_password_input_event(viewport: Node, event: InputEvent, shape_idx: in
 
 func _on_ปิดตัวใส่รหัส_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
-		$"ออฟเจ็คตัวใส่รหัส".visible= false
+		$"keypad".visible= false
 		$"กากากบาท".visible= false
+
+var typed_text : String
+var passcode : String
+# Called when the node enters the scene tree for the first time.
+@onready var label : RichTextLabel = $ออฟเจ็คตัวใส่รหัส/keypad/RichTextLabel
+@onready var square : Sprite2D = $"ออฟเจ็คตัวใส่รหัส"
