@@ -3,10 +3,23 @@
 [ext_resource type="Script" uid="uid://03mpohtmmbdn" path="res://node_black.gd" id="1_6io5r"]
 [ext_resource type="Texture2D" uid="uid://bq4seep3iqxif" path="res://aspite/ออฟเจ็คตู้(ทำเผื่อไว้ใช้).png" id="1_l83k2"]
 [ext_resource type="Texture2D" uid="uid://hr1qdb4h17lt" path="res://aspite/ลูกศร1.png" id="2_6io5r"]
-[ext_resource type="Texture2D" uid="uid://suf5xnwcgw3m" path="res://aspite/ออฟเจ็คตู้เปิด.png" id="4_0addf"]
+[ext_resource type="Texture2D" uid="uid://vkgyg1ysohil" path="res://aspite/ออฟเจ็คตู้เปิดว่าง.png" id="4_5hhnh"]
+[ext_resource type="Texture2D" uid="uid://cvl3chfjbqs4m" path="res://aspite/โต๊ะคอม.png" id="5_6hki3"]
+[ext_resource type="Texture2D" uid="uid://dbnd4yjrlakyv" path="res://aspite/คอม.png" id="6_72nob"]
+[ext_resource type="Texture2D" uid="uid://cgpoacqr80d4f" path="res://aspite/เครื้องหมาย.png" id="7_lf4d0"]
+[ext_resource type="Texture2D" uid="uid://d0no2u56vghun" path="res://aspite/paper.png" id="8_0ftcv"]
+[ext_resource type="Texture2D" uid="uid://c0ibil3jxvtuw" path="res://aspite/key.png" id="9_imv4k"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_bfyfx"]
 load_path = "res://.godot/imported/หลัง.jpg-2a8a6aae0d4b65e11894a0b814cf07bc.ctex"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5hhnh"]
+size = Vector2(42.046513, 23.741955)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0ftcv"]
+radius = 22.022715
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_72nob"]
 
 [node name="Node2D" type="Node2D" unique_id=699956836]
 script = ExtResource("1_6io5r")
@@ -15,6 +28,9 @@ script = ExtResource("1_6io5r")
 position = Vector2(575, 325)
 scale = Vector2(1.794, 1.794)
 texture = SubResource("CompressedTexture2D_bfyfx")
+
+[node name="กระดาษ" type="Sprite2D" parent="." unique_id=1265068851]
+position = Vector2(944, 467)
 
 [node name="ออฟเจ็คตู้(ทำเผื่อไว้ใช้)" type="Sprite2D" parent="." unique_id=1034795367]
 position = Vector2(966, 497)
@@ -65,17 +81,113 @@ offset_right = 0.14873886
 offset_bottom = 10.162201
 
 [node name="ออฟเจ็คตู้เปิด" type="Sprite2D" parent="." unique_id=582737071]
+visible = false
 position = Vector2(944, 467)
-texture = ExtResource("4_0addf")
+texture = ExtResource("4_5hhnh")
 
 [node name="offjectLocker" type="Area2D" parent="ออฟเจ็คตู้เปิด" unique_id=206837499]
+visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ออฟเจ็คตู้เปิด/offjectLocker" unique_id=1774997769]
 polygon = PackedVector2Array(107, 2, 107, 129, 71, 110, -51, 93, -99, 104, -100, -15, -51, -25, -30, -41, -7, -39, 6, -51, 51, -44, 52, -31, 91, -26, 93, -3)
 
-[node name="กระดาษ" type="Sprite2D" parent="ออฟเจ็คตู้เปิด" unique_id=1265068851]
+[node name="โต๊ะคอม" type="Sprite2D" parent="." unique_id=974091380]
+position = Vector2(326.55313, 483.6)
+scale = Vector2(1.7222488, 1.9333329)
+texture = ExtResource("5_6hki3")
+region_enabled = true
+region_rect = Rect2(224, 184, 184, 72)
+
+[node name="โต๊ะคอม2" type="Sprite2D" parent="." unique_id=721088143]
+position = Vector2(327, 389.00003)
+scale = Vector2(2.6875005, 2.9062493)
+texture = ExtResource("5_6hki3")
+region_enabled = true
+region_rect = Rect2(296, 152, 48, 32)
+
+[node name="computer_none_zoom" type="Area2D" parent="โต๊ะคอม2" unique_id=1631313817]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="โต๊ะคอม2/computer_none_zoom" unique_id=2086824995]
+position = Vector2(-0.18605042, 0.17204285)
+shape = SubResource("RectangleShape2D_5hhnh")
+
+[node name="คอม" type="Sprite2D" parent="." unique_id=491390402]
+visible = false
+position = Vector2(609, 368)
+scale = Vector2(4.1549997, 4.155)
+texture = ExtResource("6_72nob")
+region_enabled = true
+region_rect = Rect2(40, 72, 120, 120)
+
+[node name="เครื้องหมาย" type="Sprite2D" parent="." unique_id=1998879151]
+visible = false
+position = Vector2(849, 142)
+texture = ExtResource("7_lf4d0")
+region_enabled = true
+region_rect = Rect2(64, 88, 56, 48)
+
+[node name="เครื่องหมายกากากบาท" type="Area2D" parent="เครื้องหมาย" unique_id=1203623003]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="เครื้องหมาย/เครื่องหมายกากากบาท" unique_id=1674654142]
+position = Vector2(-1, -1)
+shape = SubResource("CircleShape2D_0ftcv")
+
+[node name="พื้นหลัง" type="Sprite2D" parent="." unique_id=145821249]
+visible = false
+modulate = Color(0, 0, 0, 0.45882353)
+self_modulate = Color(1, 1, 1, 0.7019608)
+position = Vector2(577, 357.49997)
+scale = Vector2(676, 429.00003)
+texture = SubResource("CanvasTexture_72nob")
+
+[node name="ออฟเจ็คตู้เปิด2" type="Sprite2D" parent="." unique_id=1353677197]
+visible = false
+position = Vector2(546.00006, 352)
+scale = Vector2(2.3981485, 2.326087)
+texture = ExtResource("4_5hhnh")
+region_enabled = true
+region_rect = Rect2(216, 128, 216, 184)
+
+[node name="เครื้องหมาย2" type="Sprite2D" parent="." unique_id=504922633]
+visible = false
+position = Vector2(893, 167)
+texture = ExtResource("7_lf4d0")
+region_enabled = true
+region_rect = Rect2(64, 88, 56, 48)
+
+[node name="เครื่องหมายกากากบาท2" type="Area2D" parent="เครื้องหมาย2" unique_id=2035816433]
+position = Vector2(32, 23)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="เครื้องหมาย2/เครื่องหมายกากากบาท2" unique_id=2103049556]
+position = Vector2(-31, -25)
+shape = SubResource("CircleShape2D_0ftcv")
+
+[node name="Paper" type="Sprite2D" parent="." unique_id=517304617]
+visible = false
+position = Vector2(927, 506)
+texture = ExtResource("8_0ftcv")
+
+[node name="Key" type="Sprite2D" parent="." unique_id=1679597092]
+visible = false
+position = Vector2(986, 514)
+texture = ExtResource("9_imv4k")
+
+[node name="Paper2" type="Sprite2D" parent="." unique_id=1033514110]
+visible = false
+position = Vector2(497.99997, 349.99997)
+scale = Vector2(2.5921047, 2.5921047)
+texture = ExtResource("8_0ftcv")
+
+[node name="Key2" type="Sprite2D" parent="." unique_id=905999881]
+visible = false
+position = Vector2(630.00006, 366.00003)
+scale = Vector2(3.0555556, 3.0555556)
+texture = ExtResource("9_imv4k")
 
 [connection signal="input_event" from="ออฟเจ็คตู้(ทำเผื่อไว้ใช้)/Area2D" to="." method="_on_area_2d_input_event"]
 [connection signal="pressed" from="ลูกศร1/ลูกศร1" to="." method="_on_ลูกศร1_pressed"]
 [connection signal="pressed" from="ลูกศร2/ลูกศร2" to="." method="_on_ลูกศร2_pressed"]
 [connection signal="input_event" from="ออฟเจ็คตู้เปิด/offjectLocker" to="." method="_on_offject_locker_input_event"]
+[connection signal="input_event" from="โต๊ะคอม2/computer_none_zoom" to="." method="_on_computer_none_zoom_input_event"]
+[connection signal="input_event" from="เครื้องหมาย/เครื่องหมายกากากบาท" to="." method="_on_เครื่องหมายกากากบาท_input_event"]
+[connection signal="input_event" from="เครื้องหมาย2/เครื่องหมายกากากบาท2" to="." method="_on_เครื่องหมายกากากบาท2_input_event"]
