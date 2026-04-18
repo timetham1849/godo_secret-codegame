@@ -21,6 +21,9 @@ radius = 22.022715
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_72nob"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5hhnh"]
+bg_color = Color(0.15064701, 0.15127423, 0.15298805, 1)
+
 [node name="Node2D" type="Node2D" unique_id=699956836]
 script = ExtResource("1_6io5r")
 
@@ -183,6 +186,90 @@ visible = false
 position = Vector2(630.00006, 366.00003)
 scale = Vector2(3.0555556, 3.0555556)
 texture = ExtResource("9_imv4k")
+
+[node name="b_to_d" type="Control" parent="." unique_id=711869166]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 455.0
+offset_top = 170.0
+offset_right = 744.0
+offset_bottom = 376.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="b_to_d" unique_id=1091388894]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 5.0
+offset_right = 286.0
+offset_bottom = 36.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="b_to_d/VBoxContainer" unique_id=330002285]
+layout_mode = 2
+
+[node name="Bit1_1" type="LineEdit" parent="b_to_d/VBoxContainer/HBoxContainer" unique_id=383026672]
+layout_mode = 2
+
+[node name="Bit1_2" type="LineEdit" parent="b_to_d/VBoxContainer/HBoxContainer" unique_id=14320072]
+layout_mode = 2
+
+[node name="Bit1_3" type="LineEdit" parent="b_to_d/VBoxContainer/HBoxContainer" unique_id=1766924131]
+layout_mode = 2
+
+[node name="Bit1_4" type="LineEdit" parent="b_to_d/VBoxContainer/HBoxContainer" unique_id=1437260844]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="b_to_d/VBoxContainer" unique_id=251543808]
+layout_mode = 2
+
+[node name="Bit2_1" type="LineEdit" parent="b_to_d/VBoxContainer/HBoxContainer2" unique_id=564409376]
+layout_mode = 2
+
+[node name="Bit2_2" type="LineEdit" parent="b_to_d/VBoxContainer/HBoxContainer2" unique_id=1932079860]
+layout_mode = 2
+
+[node name="Bit2_3" type="LineEdit" parent="b_to_d/VBoxContainer/HBoxContainer2" unique_id=1498391203]
+layout_mode = 2
+
+[node name="Bit2_4" type="LineEdit" parent="b_to_d/VBoxContainer/HBoxContainer2" unique_id=723752386]
+layout_mode = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="b_to_d/VBoxContainer" unique_id=1334953052]
+layout_mode = 2
+
+[node name="Bit3_1" type="LineEdit" parent="b_to_d/VBoxContainer/HBoxContainer3" unique_id=2048475612]
+layout_mode = 2
+
+[node name="Bit3_2" type="LineEdit" parent="b_to_d/VBoxContainer/HBoxContainer3" unique_id=1693140980]
+layout_mode = 2
+
+[node name="Bit3_3" type="LineEdit" parent="b_to_d/VBoxContainer/HBoxContainer3" unique_id=69321509]
+layout_mode = 2
+
+[node name="Bit3_4" type="LineEdit" parent="b_to_d/VBoxContainer/HBoxContainer3" unique_id=1435921295]
+layout_mode = 2
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="b_to_d/VBoxContainer" unique_id=1317667751]
+layout_mode = 2
+
+[node name="Bit4_1" type="LineEdit" parent="b_to_d/VBoxContainer/HBoxContainer4" unique_id=444076335]
+layout_mode = 2
+
+[node name="Bit4_2" type="LineEdit" parent="b_to_d/VBoxContainer/HBoxContainer4" unique_id=153313085]
+layout_mode = 2
+
+[node name="Bit4_3" type="LineEdit" parent="b_to_d/VBoxContainer/HBoxContainer4" unique_id=1417176522]
+layout_mode = 2
+
+[node name="Bit4_4" type="LineEdit" parent="b_to_d/VBoxContainer/HBoxContainer4" unique_id=732965993]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="b_to_d/VBoxContainer" unique_id=793955195]
+layout_mode = 2
+text = "Click"
+
+[node name="Label" type="Label" parent="b_to_d/VBoxContainer" unique_id=819544848]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_5hhnh")
 
 [connection signal="input_event" from="ออฟเจ็คตู้(ทำเผื่อไว้ใช้)/Area2D" to="." method="_on_area_2d_input_event"]
 [connection signal="pressed" from="ลูกศร1/ลูกศร1" to="." method="_on_ลูกศร1_pressed"]

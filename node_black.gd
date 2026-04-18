@@ -45,12 +45,15 @@ func _on_computer_none_zoom_input_event(viewport: Node, event: InputEvent, shape
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 			$"คอม".visible = true
 			$"เครื้องหมาย".visible = true
+			$"b_to_d".visible = true
 
 
 func _on_เครื่องหมายกากากบาท_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 		$"คอม".visible = false
 		$"เครื้องหมาย".visible = false
+		$"b_to_d".visible = false
+
 
 
 func _on_เครื่องหมายกากากบาท2_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
