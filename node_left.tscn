@@ -3,6 +3,15 @@
 [ext_resource type="Script" uid="uid://ds5mqmooitxmg" path="res://node_left.gd" id="1_0avv5"]
 [ext_resource type="Texture2D" uid="uid://cu32gg1ug1nq5" path="res://aspite/ซ้าย.jpg" id="1_vhxaa"]
 [ext_resource type="Texture2D" uid="uid://hr1qdb4h17lt" path="res://aspite/ลูกศร1.png" id="2_xi8co"]
+[ext_resource type="Texture2D" uid="uid://c88yjmmpeetia" path="res://aspite/กระดาษข้อมุล.png" id="4_4wad2"]
+[ext_resource type="Texture2D" uid="uid://cgpoacqr80d4f" path="res://aspite/เครื้องหมาย.png" id="5_csppv"]
+[ext_resource type="Texture2D" uid="uid://d0no2u56vghun" path="res://aspite/paper.png" id="6_mpkbr"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_s4bk1"]
+radius = 21.689093
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_20cnl"]
+size = Vector2(44.44449, 21.209297)
 
 [node name="Node2D" type="Node2D" unique_id=728535026]
 script = ExtResource("1_0avv5")
@@ -48,5 +57,40 @@ offset_top = -42.0
 offset_right = 0.14873886
 offset_bottom = 10.162201
 
+[node name="กระดาษข้อมุล" type="Sprite2D" parent="." unique_id=296399412]
+visible = false
+position = Vector2(578.99994, 379.99997)
+scale = Vector2(1.1250001, 1.1315789)
+texture = ExtResource("4_4wad2")
+region_enabled = true
+region_rect = Rect2(280, 8, 240, 320)
+
+[node name="เครื้องหมาย3" type="Sprite2D" parent="กระดาษข้อมุล" unique_id=1436180303]
+position = Vector2(119.111145, -151.99998)
+scale = Vector2(0.6349206, 0.60755813)
+texture = ExtResource("5_csppv")
+region_enabled = true
+region_rect = Rect2(64, 88, 56, 48)
+
+[node name="closs_เครื่องหมาย3" type="Area2D" parent="กระดาษข้อมุล/เครื้องหมาย3" unique_id=1272154763]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="กระดาษข้อมุล/เครื้องหมาย3/closs_เครื่องหมาย3" unique_id=1723237419]
+position = Vector2(-1.4, -2.1818182)
+shape = SubResource("CircleShape2D_s4bk1")
+
+[node name="Paper" type="Sprite2D" parent="." unique_id=1361410164]
+position = Vector2(952, 555.00006)
+scale = Vector2(1.125, 1.1315789)
+texture = ExtResource("6_mpkbr")
+
+[node name="paper1" type="Area2D" parent="Paper" unique_id=116643083]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paper/paper1" unique_id=2562023]
+position = Vector2(0, -6.1035156e-05)
+scale = Vector2(1.0000002, 1)
+shape = SubResource("RectangleShape2D_20cnl")
+
 [connection signal="pressed" from="ลูกศร1/ลูกศรซ้ายL" to="." method="_on_ลูกศรซ้ายl_pressed"]
 [connection signal="pressed" from="ลูกศร2/ลูกศรขวาL" to="." method="_on_ลูกศรขวาl_pressed"]
+[connection signal="input_event" from="กระดาษข้อมุล/เครื้องหมาย3/closs_เครื่องหมาย3" to="." method="_on_closs_เครื่องหมาย3_input_event"]
+[connection signal="input_event" from="Paper/paper1" to="." method="_on_paper_1_input_event"]

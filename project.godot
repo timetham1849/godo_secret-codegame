@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="secret-codegame"
-run/main_scene="uid://d2tr88q7b5crn"
+run/main_scene="uid://dm1w58afusyty"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 

@@ -1,6 +1,6 @@
 extends Control
 var typed_text : String= ""
-var passcode : String = "1234"
+var passcode : String = "9061"
 # Called when the node enters the scene tree for the first time.
 @onready var label : RichTextLabel = $RichTextLabel
 @onready var square : Sprite2D = $"ออฟเจ็คตัวใส่รหัส"
@@ -76,7 +76,7 @@ func _on_buttongreen_accept_pressed() -> void:
 		typed_text = ""
 		label.text = ""
 		await get_tree().create_timer(1.5).timeout
-		get_tree().change_scene_to_file("res://node_mainmenu.tscn")
+		get_tree().change_scene_to_file("res://node_End.tscn")
 		square.texture = sprite_normal
 	else :
 		square.texture =sprite_wrong 

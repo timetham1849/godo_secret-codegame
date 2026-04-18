@@ -29,8 +29,7 @@ func _on_area_2d_input_event(viewport, event, shape_idx) -> void:
 			$"เครื้องหมาย2".visible = true	
 			$"Paper".visible = true
 			$"Paper2".visible = true	
-			$"Key".visible = true
-			$"Key2".visible = true	
+			
 			
 
 
@@ -66,13 +65,14 @@ func _on_เครื่องหมายกากากบาท2_input_event(
 			$"เครื้องหมาย2".visible = false	
 			$"Paper".visible = false
 			$"Paper2".visible = false	
-			$"Key".visible = false
-			$"Key2".visible = false
+			
+func _on_area_paper_2_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+		if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+			$"กระดาษข้อมุล".visible = true	
+			$"เครื้องหมาย3".visible = true	
 
 
-
-
-
-
-
-	
+func _on_closs_เครื่องหมาย3_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void: 
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+		$"กระดาษข้อมุล".visible = false	
+		$"เครื้องหมาย3".visible = false	

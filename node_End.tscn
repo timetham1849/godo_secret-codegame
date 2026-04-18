@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://c4x1qsrmurh1m"]
+
+[ext_resource type="Script" uid="uid://dciuh1fp2x25g" path="res://node_end.gd" id="1_lc52e"]
+[ext_resource type="Texture2D" uid="uid://gf38c75q5g5s" path="res://aspite/หน้าว่างๆ.png" id="2_gjmvb"]
+
+[node name="Node2D" type="Node2D" unique_id=2010046440]
+script = ExtResource("1_lc52e")
+
+[node name="หน้าว่างๆ" type="Sprite2D" parent="." unique_id=1023220113]
+position = Vector2(576.99994, 323.5)
+scale = Vector2(1.7968749, 1.7916667)
+texture = ExtResource("2_gjmvb")
+
+[node name="Label" type="Label" parent="หน้าว่างๆ" unique_id=919269362]
+offset_left = -84.59129
+offset_top = -49.953487
+offset_right = 60.408707
+offset_bottom = 46.046513
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 70
+text = "END"

@@ -5,6 +5,14 @@
 [ext_resource type="Texture2D" uid="uid://blrjmvqgaw0nh" path="res://aspite/กล่อง.png" id="2_ronkt"]
 [ext_resource type="Texture2D" uid="uid://030l4txs4wy1" path="res://aspite/สมุดเขียว.png" id="3_si44i"]
 [ext_resource type="Texture2D" uid="uid://hr1qdb4h17lt" path="res://aspite/ลูกศร1.png" id="5_0fih1"]
+[ext_resource type="Texture2D" uid="uid://bily6wqfhdg88" path="res://aspite/สมุดเขียวเปิด.png" id="6_1b11h"]
+[ext_resource type="Texture2D" uid="uid://cgpoacqr80d4f" path="res://aspite/เครื้องหมาย.png" id="7_er5an"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_23j1i"]
+size = Vector2(70.86507, 29.204422)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6q8va"]
+radius = 20.518284
 
 [node name="Node2D" type="Node2D" unique_id=1885410076]
 script = ExtResource("1_r6j5p")
@@ -28,6 +36,12 @@ texture = ExtResource("3_si44i")
 region_enabled = true
 region_rect = Rect2(16, 40, 72, 32)
 
+[node name="clossblook" type="Area2D" parent="สมุดเขียว" unique_id=49971538]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="สมุดเขียว/clossblook" unique_id=1299985046]
+position = Vector2(-1.1072555, -7.390976e-06)
+shape = SubResource("RectangleShape2D_23j1i")
+
 [node name="ลูกศร2" type="Sprite2D" parent="." unique_id=1473057829]
 position = Vector2(570, 606)
 rotation = 1.5707964
@@ -46,4 +60,25 @@ offset_top = -42.0
 offset_right = 0.14873886
 offset_bottom = 10.162201
 
+[node name="สมุดเขียวเปิด" type="Sprite2D" parent="." unique_id=239340142]
+visible = false
+position = Vector2(567, 334)
+scale = Vector2(1.4703125, 1.5319445)
+texture = ExtResource("6_1b11h")
+
+[node name="เครื้องหมาย" type="Sprite2D" parent="สมุดเขียวเปิด" unique_id=1016400841]
+position = Vector2(284.97345, -23.499542)
+scale = Vector2(0.68012756, 0.65276515)
+texture = ExtResource("7_er5an")
+region_enabled = true
+region_rect = Rect2(64, 80, 56, 56)
+
+[node name="openblook" type="Area2D" parent="สมุดเขียวเปิด/เครื้องหมาย" unique_id=786764109]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="สมุดเขียวเปิด/เครื้องหมาย/openblook" unique_id=47855022]
+position = Vector2(-1, 1)
+shape = SubResource("CircleShape2D_6q8va")
+
+[connection signal="input_event" from="สมุดเขียว/clossblook" to="." method="_on_clossblook_input_event"]
 [connection signal="pressed" from="ลูกศร2/ลูกศรขวาR" to="." method="_on_ลูกศรขวาr_pressed"]
+[connection signal="input_event" from="สมุดเขียวเปิด/เครื้องหมาย/openblook" to="." method="_on_openblook_input_event"]
