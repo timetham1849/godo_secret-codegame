@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cgpoacqr80d4f" path="res://aspite/เครื้องหมาย.png" id="7_lf4d0"]
 [ext_resource type="Texture2D" uid="uid://d0no2u56vghun" path="res://aspite/paper.png" id="8_0ftcv"]
 [ext_resource type="Texture2D" uid="uid://c0ibil3jxvtuw" path="res://aspite/key.png" id="9_imv4k"]
+[ext_resource type="Script" uid="uid://bei0yvjipfjbw" path="res://b_to_d.gd" id="10_0ftcv"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_bfyfx"]
 load_path = "res://.godot/imported/หลัง.jpg-2a8a6aae0d4b65e11894a0b814cf07bc.ctex"
@@ -195,6 +196,7 @@ offset_left = 455.0
 offset_top = 170.0
 offset_right = 744.0
 offset_bottom = 376.0
+script = ExtResource("10_0ftcv")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="b_to_d" unique_id=1091388894]
 layout_mode = 0
@@ -263,7 +265,7 @@ layout_mode = 2
 [node name="Bit4_4" type="LineEdit" parent="b_to_d/VBoxContainer/HBoxContainer4" unique_id=732965993]
 layout_mode = 2
 
-[node name="Button" type="Button" parent="b_to_d/VBoxContainer" unique_id=793955195]
+[node name="click" type="Button" parent="b_to_d/VBoxContainer" unique_id=793955195]
 layout_mode = 2
 text = "Click"
 
@@ -278,3 +280,4 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_5hhnh")
 [connection signal="input_event" from="โต๊ะคอม2/computer_none_zoom" to="." method="_on_computer_none_zoom_input_event"]
 [connection signal="input_event" from="เครื้องหมาย/เครื่องหมายกากากบาท" to="." method="_on_เครื่องหมายกากากบาท_input_event"]
 [connection signal="input_event" from="เครื้องหมาย2/เครื่องหมายกากากบาท2" to="." method="_on_เครื่องหมายกากากบาท2_input_event"]
+[connection signal="pressed" from="b_to_d/VBoxContainer/click" to="b_to_d" method="_on_click_pressed"]

@@ -68,3 +68,11 @@ func _on_เครื่องหมายกากากบาท2_input_event(
 			$"Paper2".visible = false	
 			$"Key".visible = false
 			$"Key2".visible = false
+
+
+
+
+
+
+
+	
