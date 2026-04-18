@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://ckfcf4ytfekp5"]
 
 [ext_resource type="Texture2D" uid="uid://d0k6x3r5vrf4c" path="res://aspite/โต๊ะ (1).png" id="1_nlila"]
+[ext_resource type="Texture2D" uid="uid://blrjmvqgaw0nh" path="res://aspite/กล่อง.png" id="2_ronkt"]
+[ext_resource type="Texture2D" uid="uid://030l4txs4wy1" path="res://aspite/สมุดเขียว.png" id="3_si44i"]
 
 [node name="Node2D" type="Node2D" unique_id=1885410076]
 
@@ -8,3 +10,17 @@
 position = Vector2(577, 321.5)
 scale = Vector2(1.80625, 1.7805556)
 texture = ExtResource("1_nlila")
+
+[node name="กล่อง" type="Sprite2D" parent="." unique_id=361923151]
+position = Vector2(696.86, 326.99997)
+scale = Vector2(1.8168756, 1.6600002)
+texture = ExtResource("2_ronkt")
+region_enabled = true
+region_rect = Rect2(16, 24, 64, 40)
+
+[node name="สมุดเขียว" type="Sprite2D" parent="." unique_id=1004271071]
+position = Vector2(492.99997, 335)
+scale = Vector2(1.80625, 1.7805556)
+texture = ExtResource("3_si44i")
+region_enabled = true
+region_rect = Rect2(16, 40, 72, 32)
